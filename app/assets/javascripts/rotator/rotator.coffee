@@ -10,7 +10,15 @@ class Rotator
           contentType: 'application/json'
         )
         .then (response) =>
-            console.log response
-            # $('.rotator-container').append('<p> ' + JSON.stringify(response) + '</p>')
+            @faucets = response
+            rotatorEl = $('.js-rotator')[0];
+            frag = document.createDocumentFragment();
+            @faucets.forEach((faucet) =>
+                text = document.createElement('p');
+                text.textContent = faucet.link;
+                frag.appendChild(text);
+            );
+
+            rotatorEl.appendChild(frag);
 
 rotator = new Rotator();

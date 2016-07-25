@@ -17,4 +17,6 @@
 
 @import "normalize";
 
+@import "common/base";
+@import "common/icons";
 @import "common/header";

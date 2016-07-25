@@ -1,0 +1,21 @@
+.rotator-container {
+    display: flex;
+
+    height: calc(100vh - 48px);
+    color: #000;
+
+}
+
+.next-button {
+    width: 100%;
+
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 20px 0;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    appearance: none;
+    align-self: center;
+}

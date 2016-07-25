@@ -1,0 +1,54 @@
+body {
+    font-size: 13px;
+    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    background: image-url('back.png');
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.title {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+
+    &__main {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    &__secondary {
+        font-size: 14px;
+        color: rgba(#000, 0.5);
+    }
+}
+
+.hidden {
+    display: none;
+}
