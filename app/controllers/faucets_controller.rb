@@ -6,26 +6,23 @@ class FaucetsController < ApplicationController
   end
 
   def index
+    # result = {
+    #   :wut => "WAI"
+    # }
 
-  	# result = {
-  	# 	:wut => "WAI"
-  	# }
-
-  	# render :json => result
+    # render :json => result
   end
 
   def get
-    puts "WAKA"
-    puts(@faucets.to_s)
     render :json => @faucets
   end
 
   def import
-	begin
-    	Faucet.import(params[:file])
-		redirect_to root_url, notice: "Faucets imported."
+    begin
+        Faucet.import(params[:file])
+        redirect_to root_url, notice: "Faucets imported."
     rescue
-    	redirect_to root_url, notice: "Invalid CSV file format."
+        redirect_to root_url, notice: "Invalid CSV file format."
     end
   end
 

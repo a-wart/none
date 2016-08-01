@@ -1,18 +1,20 @@
 <%= flash[:notice] %>
-<table>
-  <thead>
+<table class="faucets-list">
+  <thead class="faucets-list--header">
     <tr>
       <th>Link</th>
       <th>Timer</th>
       <th>Reflink</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <% @faucets.each do |faucet| %>
       <tr>
-        <td><%= faucet.link %></td>
-        <td><%= faucet.timer %></td>
-        <td><%= faucet.reflink %></td>
+        <td class="faucet-item"><%= faucet.link %></td>
+        <td class="faucet-item"><%= faucet.timer %></td>
+        <td class="faucet-item"><%= faucet.reflink %></td>
+        <td class="faucet-item"><%= link_to 'Show', faucet_path(faucet) %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,0 +1,21 @@
+.faucets-list {
+    color: black;
+    position: relative;
+    margin: 0 auto;
+    background: #ececec;
+    border: 1px solid #dedede;
+
+    &--header {
+    	text-align: left;
+    	padding: 8px;
+
+    	th {
+    		padding: 8px;
+    	}
+    }
+
+    .faucet-item {
+    	padding: 8px;
+    	border-bottom: 1px solid #dedede;
+    }
+}
